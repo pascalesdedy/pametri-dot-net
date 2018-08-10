@@ -10,6 +10,11 @@
   </head>
 
   <body>
+
+    <%= render 'layouts/nav.html.erb' %>
+  <main role="main" class="container">
     <%= yield %>
+  </main>
+    <%= render 'layouts/footer.html.erb' %>
   </body>
 </html>
