@@ -24,8 +24,8 @@
                 <%= link_to 'Read More', article, class: 'btn btn-primary' %>
             </div>
             <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
+              Posted on <%= article.created_at %> 
+              by <%= article.user.email %>
             </div>
           </div>
           <% end %>
@@ -53,26 +53,26 @@
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">Web Design</a>
+                      <a href="#">Wayang</a>
                     </li>
                     <li>
-                      <a href="#">HTML</a>
+                      <a href="#">Tosan Aji</a>
                     </li>
                     <li>
-                      <a href="#">Freebies</a>
+                      <a href="#">Budaya Pitutur</a>
                     </li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">JavaScript</a>
+                      <a href="#">Geguritan</a>
                     </li>
                     <li>
-                      <a href="#">CSS</a>
+                      <a href="#">Tari</a>
                     </li>
                     <li>
-                      <a href="#">Tutorials</a>
+                      <a href="#">Busana</a>
                     </li>
                   </ul>
                 </div>
@@ -125,4 +125,6 @@
 
 
 <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-large btn-danger' %>
+<% if user_signed_in? %>
 <%= link_to 'New Article', new_article_path %>
+<%end%>

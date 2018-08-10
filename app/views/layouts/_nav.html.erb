@@ -22,8 +22,13 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+                <% if user_signed_in? %>
+                <a class="nav-link"><%= current_user.email %></a>
+                <% else %>
+                <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+                <% end %>
             </li>
+
           </ul>
         </div>
       </div>
