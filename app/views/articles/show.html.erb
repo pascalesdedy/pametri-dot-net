@@ -26,11 +26,12 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
+          <%=image_tag @article.image_url(:display), class: "img-fluid rounded" %>  
+   
           <hr>
           <!-- Post Content -->
-          <p><%= @article.body %></p>
+          <p><%= @article.body.to_s.html_safe %></p>
 
           <hr>
 

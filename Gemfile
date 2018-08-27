@@ -30,6 +30,9 @@ gem 'devise'
 gem 'redcarpet'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'ckeditor'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
