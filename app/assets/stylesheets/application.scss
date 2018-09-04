@@ -25,7 +25,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  padding-top:  60px;
+  padding-top:  30px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .footer {
   position: absolute;
@@ -51,6 +52,10 @@ body {
   list-style: none;
 } 
 
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 24;
+}
 
 /*form sign in */
 .form-signin {

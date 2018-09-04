@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only:[:create]
 
+
   # GET /articles
   # GET /articles.json
   def index
@@ -15,7 +16,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = current_user.articles.new
+    @article = Article.new
   end
 
   # GET /articles/1/edit
@@ -62,10 +63,18 @@ class ArticlesController < ApplicationController
     end
   end
 
+def kategori_wayang
+
+end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+    end
+
+    def set_category
+      @category = Category.find(params[:category_id])
     end
 
     def set_user
@@ -74,6 +83,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :image,)
+      params.require(:article).permit(:title, :body, :image, :category_id)
     end
 end
