@@ -1,17 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-
-
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
   <!-- Page Content -->
     <div class="container">
 
       <div class="row">
 
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-10">
 
           <!-- Title -->
-          <h1 class="mt-4"><%= @article.title %></h1>
+          <h1 class="mt-8"><%= @article.title %></h1>
 
           <!-- Author -->
           <p class="lead">
@@ -37,107 +35,9 @@
 
           <hr>
           <div class="fb-comments" data-href= <%= 'pametri.herokuapp.com' + article_path %> data-numposts="5"></div>
-
-
-
-          <!-- Comments Form -->
-
-
-          <!-- Single Comment -->
-          <div class="media mb-4">
-            <div class="media-body">
-
-            </div>
-          </div>
-
-          <!-- Comment with nested comments -->
-          <div class="media mb-4">
-            <div class="media-body">
-
-
-              <div class="media mt-4">
-                <div class="media-body">
-
-                </div>
-              </div>
-
-              <div class="media mt-4">
-                <div class="media-body">
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Wayang</a>
-                    </li>
-                    <li>
-                      <a href="#">Tosan Aji</a>
-                    </li>
-                    <li>
-                      <a href="#">Budaya Pitutur</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Geguritan</a>
-                    </li>
-                    <li>
-                      <a href="#">Tari</a>
-                    </li>
-                    <li>
-                      <a href="#">Busana</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-
+         
     </div>
-    <!-- /.container -->
+
 
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
@@ -152,3 +52,4 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
   </script>
+</div>

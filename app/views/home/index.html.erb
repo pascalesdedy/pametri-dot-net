@@ -1,52 +1,11 @@
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 
+    <% if user_signed_in? %>
+		<%= current_user.email %>
+	<% end %>
 
-<header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('https://res.cloudinary.com/latarcloud/image/upload/v1535401925/pametri/assets/images/keris.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Tosan Aji</h1>
-              <p>This is a description for the first slide.</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://res.cloudinary.com/latarcloud/image/upload/v1535401959/pametri/assets/images/Tari.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Seni Tari</h1>
-              <p>This is a description for the second slide.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://res.cloudinary.com/latarcloud/image/upload/v1535401926/pametri/assets/images/Wayang.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Wayang Kulit</h1>
-              <p>This is a description for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
-
-    <!-- Page Content 
-    <section class="py-5">
-      <div class="container">
-        <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the
-          <code>full-slider.css</code>
-          file.</p>
-
-      </div>
-    </section>
-    -->
+</span>
+<%= image_tag "logo-pametri.jpg", class: "center" %>
+<div><h1 align="center">Pametri Budaya Nusantara</h1></div>
+<p align="center"><i>Perkumpulan alumni SMA Kolese De Britto lintas angkatan yang sedang belajar mencintai dan merawat kebudayaan Nusantara.</i></p>
+</div>
